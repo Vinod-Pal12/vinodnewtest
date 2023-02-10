@@ -5,8 +5,10 @@ name: Deploy to ECR
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  workflow_dispatch: 
-
+  workflow_dispatch:
+  schedule:
+    - cron: '0 17 * * *'
+  
 jobs:
   
   build:
