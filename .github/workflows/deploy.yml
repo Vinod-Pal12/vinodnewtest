@@ -4,9 +4,8 @@ name: Deploy to ECR
 
 # Controls when the workflow will run
 on:
-  workflow_dispatch:
-    Schedule:
-      - cron: '5 * * * *'
+  schedule:
+    - cron: '5 * * * *'
   
 jobs:
   
