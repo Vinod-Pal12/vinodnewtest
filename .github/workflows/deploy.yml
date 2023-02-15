@@ -4,8 +4,10 @@ name: Deploy to ECR
 
 # Controls when the workflow will run
 on:
-  schedule:
-    - cron: '40 9 8-14 * 1'
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
   
 jobs:
   
