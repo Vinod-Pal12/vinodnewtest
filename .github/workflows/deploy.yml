@@ -5,9 +5,6 @@ name: Deploy to ECR
 # Controls when the workflow will run
 on:
   workflow_call:
-    inputs:
-      environment:
-        type: environment
   
 jobs:
   
