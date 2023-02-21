@@ -1,1 +1,12 @@
+name: Call a reusable workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/deploy.yml
 
