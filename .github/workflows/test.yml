@@ -1,11 +1,13 @@
 name: Call a reusable workflow
 
-#on:
- #schedule:
- # - cron : '15 9 * * *'
+on:
+ schedule:
+  - cron : '15 9 * * *'
         
 jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
+    with: 
+     Environment: ${{ env.dev }}
     secrets: inherit
 
