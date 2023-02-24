@@ -2,9 +2,9 @@ name: Calling workflow test-vinod_pal
 
 on:
  workflow_dispatch:
-  #inputs:
-      #environment:
-        #type: environment
+  inputs:
+      environment:
+        type: environment
  #schedule:
  # - cron : '15 9 * * *'
  
