@@ -44,7 +44,7 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
     - name: delete environment tag
-      id: tag_version1
+      #id: tag_version1
       uses: dev-drprasad/delete-tag-and-release@v0.2.0
       with:
         tag_name: ${{ inputs.environment }}
