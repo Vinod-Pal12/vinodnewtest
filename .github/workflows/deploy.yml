@@ -47,7 +47,7 @@ jobs:
       id: tag_version1
       uses: dev-drprasad/delete-tag-and-release@v0.2.0
       with:
-        tag_name: vdev #(required) tag name to delete
+        tag_name: dev #(required) tag name to delete
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
