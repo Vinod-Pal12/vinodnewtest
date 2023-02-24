@@ -7,7 +7,11 @@ on:
         type: environment
  #schedule:
  # - cron : '15 9 * * *'
-        
+ 
+ permissions:
+  id-token: write
+  contents: write
+
 jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
