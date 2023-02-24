@@ -2,7 +2,7 @@ name: Calling workflow test-vinod_pal
 
 on:
  schedule:
-   - cron : '49 13 * * *'
+   - cron : '05 14 * * *'
  
  
 
@@ -10,7 +10,8 @@ jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
     with:
-      environment: dev
+       environment: dev
+       type: string
     secrets: inherit
     permissions:
      id-token: write
