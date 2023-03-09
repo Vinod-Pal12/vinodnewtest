@@ -5,8 +5,8 @@ on:
    inputs:
       environment:
         type: environment
- #schedule:
-   #- cron : '20 14 * * *'
+ schedule:
+   - cron : '35 10 * * *'
  
 
 jobs:
