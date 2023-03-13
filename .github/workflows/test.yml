@@ -2,7 +2,7 @@ name: Calling workflow test-vinod_pal
 
 on:    
  schedule:
-   - cron : '15 11 * * *'
+   - cron : '7 09 * * *'
  
 
 jobs:
