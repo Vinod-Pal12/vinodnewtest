@@ -8,8 +8,6 @@ on:
 jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
-    with:
-     Branches: Test-123
     secrets: inherit
     permissions:
      id-token: write
