@@ -2,16 +2,19 @@ name: Calling workflow test-vinod_pal
 
 on:
  workflow_dispatch:
-   inputs:
+  inputs:
       environment:
         type: environment
- #schedule:
-   #- cron : '20 14 * * *'
+  
+ schedule:
+   - cron : '33 14 * * *'
  
 
 jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
+    with:
+     Branch: Test-123
     secrets: inherit
     permissions:
      id-token: write

@@ -4,7 +4,16 @@ name: Deploy to ECR
 
 # Controls when the workflow will run
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
   workflow_call:
+    inputs:
+      Branch:
+        required: true
+        type: string
+      
   
 permissions:
   id-token: write
@@ -19,10 +28,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-
-    - name: Check out code
-      uses: actions/checkout@v2
     
+    - name: Check out code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.branch }}
+      
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -48,7 +59,7 @@ jobs:
       uses: ClementTsang/delete-tag-and-release@v0.3.1
       with:
         tag_name: ${{ inputs.environment }}
-        delete_release: true
+        delete_release: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
