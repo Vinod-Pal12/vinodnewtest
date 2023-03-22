@@ -6,13 +6,15 @@ on:
       environment:
         type: environment
   
- #schedule:
-   #- cron : '28 09 * * *'
+ schedule:
+   - cron : '36 13 * * *'
  
 
 jobs:
   call-workflow:
     uses: ./.github/workflows/deploy.yml
+    with:
+     Branch: Test-123
     secrets: inherit
     permissions:
      id-token: write
