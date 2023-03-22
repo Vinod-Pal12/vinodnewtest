@@ -4,6 +4,10 @@ name: Deploy to ECR
 
 # Controls when the workflow will run
 on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
   workflow_call:
     inputs:
       Branch:
