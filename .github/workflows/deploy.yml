@@ -76,7 +76,7 @@ jobs:
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        commit_sha: ${{ GITHUB_OUTPUT }}
+        commit_sha: GITHUB_OUTPUT 
         release_branches: ${{ inputs.branch }}
         custom_tag: ${{ inputs.environment }}
         tag_prefix: ""
