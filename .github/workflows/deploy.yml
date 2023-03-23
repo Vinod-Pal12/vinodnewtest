@@ -13,6 +13,9 @@ on:
       Branch:
         required: true
         type: string
+      environment:
+        required: true
+        type: string
       
   
 permissions:
