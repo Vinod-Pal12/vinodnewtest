@@ -66,6 +66,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
+    - name: Set desired commit SHA in output
+      id: set_commit_sha
+      run: |
+       echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+        
+    
         
     - name: push environment tag
       id: tag_version
