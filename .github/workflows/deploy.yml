@@ -70,9 +70,10 @@ jobs:
       id: set_commit_sha
       run: |
        echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
-        
-    
-        
+       
+       outputs:
+         commit_sha: ${{ steps.set_commit_sha.outputs.COMMIT_SHA }}
+             
     - name: push environment tag
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.1
