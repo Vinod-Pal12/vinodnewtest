@@ -66,17 +66,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
-    - name: Set desired commit SHA in output
-      id: set_commit_sha
-      run: |
-       echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
         
     - name: push environment tag
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        commit_sha: COMMIT_SHA
         release_branches: ${{ inputs.branch }}
         custom_tag: ${{ inputs.environment }}
         tag_prefix: ""
