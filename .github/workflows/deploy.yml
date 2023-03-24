@@ -28,6 +28,11 @@ jobs:
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ inputs.branch }}
+    
     - name: Set desired commit SHA in output
       id: set_commit_sha
       run: |
