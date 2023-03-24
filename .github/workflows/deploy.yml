@@ -80,5 +80,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         release_branches: ${{ inputs.branch }}
+        Commit_sha: ${{ needs.job_name.outputs.commit_sha }}
         custom_tag: ${{ inputs.environment }}
         tag_prefix: ""
