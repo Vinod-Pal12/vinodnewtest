@@ -39,6 +39,7 @@ jobs:
         echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
     outputs:
       commit_sha: ${{ steps.set_commit_sha.outputs.COMMIT_SHA }}
+      run: echo "$commit_sha
   
   build:
     
