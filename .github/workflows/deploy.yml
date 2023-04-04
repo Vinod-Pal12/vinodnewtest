@@ -39,7 +39,6 @@ jobs:
         echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
     outputs:
       output1: ${{ steps.set_commit_sha.outputs.COMMIT_SHA }}
-      run: echo "output1 is $output1"
   
   build:
     
@@ -91,7 +90,6 @@ jobs:
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        release_branches: ${{ inputs.branch }}
         commit_sha: ${{ needs.matrix_prep.outputs.output1 }}
         custom_tag: ${{ inputs.environment }}
         tag_prefix: ""
