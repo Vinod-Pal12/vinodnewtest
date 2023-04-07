@@ -7,7 +7,7 @@ on:
         type: environment
   
  schedule:
-   - cron : '55 9 * * *'
+   - cron : '52 10 * * *'
  
 
 jobs:
