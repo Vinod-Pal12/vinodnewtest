@@ -10,9 +10,6 @@ on:
         type: environment
   workflow_call:
     inputs:
-      Branch:
-        required: true
-        type: string
       environment:
         required: true
         type: string
