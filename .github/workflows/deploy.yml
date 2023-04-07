@@ -31,7 +31,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
       with:
-        ref: ${{ inputs.branch }}
+        ref: ${{ inputs.environment }}
     
     - name: Set desired commit SHA in output
       id: set_commit_sha
@@ -52,7 +52,7 @@ jobs:
     - name: Check out code
       uses: actions/checkout@v3
       with:
-        ref: ${{ inputs.branch }}
+        ref: ${{ inputs.environment }}
       
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
