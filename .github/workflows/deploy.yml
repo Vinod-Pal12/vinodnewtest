@@ -87,6 +87,6 @@ jobs:
       uses: mathieudutour/github-tag-action@v6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        commit_sha: ${{ needs.matrix_prep.outputs.output1 }}
+        #commit_sha: ${{ needs.matrix_prep.outputs.output1 }}
         custom_tag: ${{ inputs.environment }}
         tag_prefix: ""
