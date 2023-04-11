@@ -62,7 +62,7 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
     - name: Delete environment tag
-      if: not(inputs.use_env_as_build_ref)
+      if: inputs.use_env_as_build_ref == false
       id: tag_version1
       uses: ClementTsang/delete-tag-and-release@v0.3.1
       with:
@@ -72,7 +72,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: push environment tag
-      if: not(inputs.use_env_as_build_ref)
+      if: inputs.use_env_as_build_ref == false
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.1
       with:
