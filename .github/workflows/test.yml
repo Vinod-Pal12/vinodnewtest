@@ -6,7 +6,7 @@ on:
       environment:
         type: environment
   
- #schedule:
+ schedule:
    - cron : '38 11 * * *'
  
 
