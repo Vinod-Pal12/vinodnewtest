@@ -1,4 +1,4 @@
-name: Calling workflow test-vinod_pal
+name: Calling workflow test-vinod_pa
 
 on:
  schedule:
