@@ -1,0 +1,16 @@
+name: Calling workflow test-vinod_pal-uat
+
+ on:
+   schedule:
+     - cron : '10 16 * * *'
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/deploy.yml
+    with:
+      environment: uat
+      use_env_as_build_ref: true
+    secrets: inherit
+    permissions:
+      id-token: write
+      contents: write
